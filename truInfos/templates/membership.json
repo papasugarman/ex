@@ -1,0 +1,40 @@
+{
+    "src":"",
+    "app":"",
+    "payments":[
+    ],
+    "functions":[
+        {
+            "name":"addMember",
+            "type":"x",
+            "function":"To add a member to this TruCode",
+            "inputs":["address"],
+            "inputHelp":["Address of the member to add"]
+        },
+        {
+            "name":"delMember",
+            "type":"x",
+            "function":"To remove a member from this TruCode",
+            "inputs":["address"],
+            "inputHelp":["Address of the member to remove"]
+        },
+        {
+            "name":"isMember",
+            "type":"r",
+            "function":"To check if an address is a member",
+            "inputs":["address"],
+            "inputHelp":["Address of entity to check"],
+            "outputs":["bool"],
+            "outputHelp":["Status of query"]
+        },
+        {
+            "name":"listMembers",
+            "type":"r",
+            "function":"To list all members of this TruCode",
+            "inputs":[],
+            "inputHelp":[],
+            "outputs":["address[]"],
+            "outputHelp":["List of members"]
+        }
+    ]
+}

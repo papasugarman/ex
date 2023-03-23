@@ -1,0 +1,31 @@
+{
+    "src":"",
+    "app":"",
+    "payments":[
+    ],
+    "functions":[
+        {
+            "name":"init",
+            "type":"x",
+            "function":"To initliaze this TruCode",
+            "inputs":["string","string","string"],
+            "inputHelp":["Title","Statement","URL"]
+        },
+        {
+            "name":"publish",
+            "type":"x",
+            "function":"Publishes and fianlizes this TruCode",
+            "inputs":[],
+            "inputHelp":[]
+        },
+        {
+            "name":"viewObituary",
+            "type":"r",
+            "function":"To view this obituary",
+            "inputs":[],
+            "inputHelp":[],
+            "outputs":["address","string","string","string","uint256"],
+            "outputHelp":["Address of the publisher","Title","Statemenet","URL","Timestamp when published"]
+        }
+    ]
+}

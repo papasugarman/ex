@@ -1,0 +1,31 @@
+{
+    "src":"",
+    "app":"",
+    "payments":[
+    ],
+    "functions":[
+        {
+            "name":"getUserBalance",
+            "type":"r",
+            "function":"To get balance of a paying user",
+            "inputs":["address"],
+            "inputHelp":["Address to check"],
+            "outputs":["uint256"],
+            "outputHelp":["Balance in XEX"]
+        },
+        {
+            "name":"giveToOwner",
+            "type":"x",
+            "function":"Gives owner the amount. Amount should not let balance of the TruCode fall below account fee",
+            "inputs":["uint256"],
+            "inputHelp":["Amount of XEX"]
+        },
+        {
+            "name":"finishAccount",
+            "type":"x",
+            "function":"To finish this TruCode's XEX account. Balance must be equivalent to account fee to call this",
+            "inputs":[],
+            "inputHelp":[]
+        }
+    ]
+}

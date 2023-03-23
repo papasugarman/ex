@@ -1,0 +1,80 @@
+{
+    "src":"",
+    "app":"",
+    "payments":[
+        {"value":0, "title": "Credit in XEX", "description": "Upload any amount of XEX to pay for services. Get instant refunds for unused credit"}
+    ],
+    "functions":[
+        {
+            "name":"myBalance",
+            "type":"r",
+            "function":"Check balance of your account",
+            "inputs":[],
+            "inputHelp":[],
+            "outputs":["uint256"],
+            "outputHelp":["Balance in EX Coins"]
+        },
+        {
+            "name":"refund",
+            "type":"x",
+            "function":"To refund any unused credit.",
+            "inputs":[],
+            "inputHelp":[]
+        },
+        {
+            "name":"purchase_tru",
+            "type":"x",
+            "function":"Purchase TruCode allowance to publish a TruCode on EX Blockchain. Requires balance with this TruCode first.",
+            "inputs":["uint256"],
+            "inputHelp":["Quantity "]
+        },
+        {
+            "name":"purchase_mb",
+            "type":"x",
+            "function":"To purchase 1MB of space for a TruCode on the Blockchain. Requires balance with this TruCode first.",
+            "inputs":["uint256","uint256"],
+            "inputHelp":["Nonce - the transaction serial number that resulted in the formation of the TruCode","Quantity "]
+        },
+        {
+            "name":"purchase_oracle",
+            "type":"x",
+            "function":"To purchase Oracle credits. Requires balance with this TruCode first.",
+            "inputs":["uint256"],
+            "inputHelp":["Quantity "]
+        },
+        {
+            "name":"purchase_oracleTru",
+            "type":"x",
+            "function":"To purchase Oracle credits for your TruCode. Requires balance with this TruCode first.",
+            "inputs":["uint256","uint256"],
+            "inputHelp":["Nonce - the transaction serial number that resulted in the formation of the TruCode","Quantity "]
+        },
+        {
+            "name":"getTruPrice",
+            "type":"r",
+            "function":"Check the price of issuing a TruCode on EX Blockchain",
+            "inputs":[],
+            "inputHelp":[],
+            "outputs":["uint256"],
+            "outputHelp":["in XEX"]
+        },
+        {
+            "name":"getMBPrice",
+            "type":"r",
+            "function":"Check the price of 1MB space on EX Blockchain",
+            "inputs":[],
+            "inputHelp":[],
+            "outputs":["uint256"],
+            "outputHelp":["in XEX"]
+        },
+        {
+            "name":"getOraclePrice",
+            "type":"r",
+            "function":"Check the price of an Oracle credit",
+            "inputs":[],
+            "inputHelp":[],
+            "outputs":["uint256"],
+            "outputHelp":["in XEX"]
+        }
+    ]
+}

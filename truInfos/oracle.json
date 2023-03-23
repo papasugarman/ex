@@ -1,0 +1,81 @@
+{
+    "src":"",
+    "app":"",
+    "payments":[
+    ],
+    "functions":[
+        {
+            "name":"scheduleRun",
+            "type":"x",
+            "function":"To schedule a run of your TruCode",
+            "inputs":["uint256","uint256"],
+            "inputHelp":["Nonce - the transaction serial number that resulted in the formation of the TruCode","Timestamp at which to schedule. Rounded to the nearest 15 minutes"]
+        },
+        {
+            "name":"scheduleRunSelf",
+            "type":"x",
+            "function":"For TruCodes to schedule a run for themselves. Not to be run by accounts.",
+            "inputs":["uint256"],
+            "inputHelp":["Timestamp at which to schedule. Rounded to the nearest 15 minutes"]
+        },
+        {
+            "name":"UnitXEX2USD",
+            "type":"r",
+            "function":"Get price of EX Coin. XEXUSD",
+            "inputs":[],
+            "inputHelp":[],
+            "outputs":["uint256"],
+            "outputHelp":["Price in USD"]
+        },
+        {
+            "name":"BTCXEX",
+            "type":"r",
+            "function":"Get latest conversion rate of BTC to XEX",
+            "inputs":[],
+            "inputHelp":[],
+            "outputs":["string"],
+            "outputHelp":["in XEX"]
+        },
+        {
+            "name":"ETHXEX",
+            "type":"r",
+            "function":"Get latest conversion rate of ETH to XEX",
+            "inputs":[],
+            "inputHelp":[],
+            "outputs":["string"],
+            "outputHelp":["in XEX"]
+        },
+        {
+            "name":"getCount",
+            "type":"r",
+            "function":"Get a count of TruCodes per category in the register",
+            "inputs":[],
+            "inputHelp":[],
+            "outputs":["uint[]"],
+            "outputHelp":["number of TruCodes per category"]
+        },
+        {
+            "name":"getList",
+            "type":"r",
+            "function":"Get a list of TruCodes in the register. Used for browsing.",
+            "inputs":["uint256","uint256","uint256"],
+            "inputHelp":["Category number (0-7)","Page number","Per page"],
+            "outputs":["address[]"],
+            "outputHelp":["TruCodes in the register"]
+        },
+        {
+            "name":"provideTruInfo",
+            "type":"x",
+            "function":"To provide information about your TruCode in the register. 1x run free",
+            "inputs":["uint256","uint256","string","string","string"],
+            "inputHelp":["Nonce - the transaction serial number that resulted in the formation of the TruCode","Category number (0-7)","Title of the TruCode (Max 25 words)","Description of the TruCode (Max 100 words)","path of where to fetch TruInfo (function definition) from"]
+        },
+        {
+            "name":"provideTruInfoSelf",
+            "type":"x",
+            "function":"For TruCodes to provide info themselves. Can only be run by TruCodes. 1x run free",
+            "inputs":["uint256","string","string","string"],
+            "inputHelp":["Category number (0-7)","Title of the TruCode (Max 25 words)","Description of the TruCode (Max 100 words)","path of where to fetch TruInfo (function definition) from"]
+        }
+    ]
+}

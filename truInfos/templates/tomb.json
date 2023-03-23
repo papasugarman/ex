@@ -1,0 +1,31 @@
+{
+    "src":"",
+    "app":"",
+    "payments":[
+    ],
+    "functions":[
+        {
+            "name":"attend",
+            "type":"x",
+            "function":"To attend this Tomb. Can only be attended once in 10 mins",
+            "inputs":[],
+            "inputHelp":[]
+        },
+        {
+            "name":"viewTomb",
+            "type":"r",
+            "function":"To view this digital tomb",
+            "inputs":[],
+            "inputHelp":[],
+            "outputs":["string","address[]","uint256[]"],
+            "outputHelp":["Salutations","List of visitors","List of visitor timestamps"]
+        },
+        {
+            "name":"init",
+            "type":"x",
+            "function":"To initialize this digital tomb",
+            "inputs":["string","string","string"],
+            "inputHelp":["Title","Description","Salutations. e.g. visited, paid respects, attended, came here etc."]
+        }
+    ]
+}

@@ -1,0 +1,65 @@
+{
+    "src":"",
+    "app":"",
+    "payments":[
+    ],
+    "functions":[
+        {
+            "name":"name",
+            "type":"r",
+            "function":"To get the name of the token",
+            "inputs":[],
+            "inputHelp":[],
+            "outputs":["string"],
+            "outputHelp":["Name of the token"]
+        },
+        {
+            "name":"symbol",
+            "type":"r",
+            "function":"To get the symbol of the token",
+            "inputs":[],
+            "inputHelp":[],
+            "outputs":["string"],
+            "outputHelp":["Symbol of the token"]
+        },
+        {
+            "name":"decimals",
+            "type":"r",
+            "function":"To get the decimals of the token",
+            "inputs":[],
+            "inputHelp":[],
+            "outputs":["uint256"],
+            "outputHelp":["Decimals"]
+        },
+        {
+            "name":"mint",
+            "type":"x",
+            "function":"To mint new tokens and send to the owner",
+            "inputs":["uint256"],
+            "inputHelp":["Number of tokens to mint"]
+        },
+        {
+            "name":"transfer",
+            "type":"x",
+            "function":"To transfer tokens to a recepient",
+            "inputs":["address","uint256"],
+            "inputHelp":["Address of the recepient","Number of tokens to send"]
+        },
+        {
+            "name":"balanceOf",
+            "type":"r",
+            "function":"To view the token balance of an address",
+            "inputs":["address"],
+            "inputHelp":["Address to check"],
+            "outputs":["uint256"],
+            "outputHelp":["Number of tokens"]
+        },
+        {
+            "name":"init",
+            "type":"x",
+            "function":"To initialize this token",
+            "inputs":["string","string","uint256"],
+            "inputHelp":["Name of the token","Symbol of the token","Decimals"]
+        }
+    ]
+}

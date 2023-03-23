@@ -1,0 +1,38 @@
+{
+    "src":"",
+    "app":"",
+    "payments":[
+    ],
+    "functions":[
+        {
+            "name":"addVoter",
+            "type":"x",
+            "function":"To add a voter to the voter's list. Can be executed by owner only.",
+            "inputs":["address"],
+            "inputHelp":["Address of entity to add as voter"]
+        },
+        {
+            "name":"start",
+            "type":"x",
+            "function":"To open the TruCode for votes. Can be executed by owner only.",
+            "inputs":["uint256"],
+            "inputHelp":["Time in seconds to open polling for"]
+        },
+        {
+            "name":"vote",
+            "type":"x",
+            "function":"To cast a vote. Only voters already added can vote. Requires voting to have started",
+            "inputs":[],
+            "inputHelp":[]
+        },
+        {
+            "name":"getVotes",
+            "type":"r",
+            "function":"To get the number of votes casted",
+            "inputs":[],
+            "inputHelp":[],
+            "outputs":["uint256"],
+            "outputHelp":["Number of votes casted"]
+        }
+    ]
+}

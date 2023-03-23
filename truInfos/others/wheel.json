@@ -1,0 +1,51 @@
+{
+    "src":"",
+    "app":"",
+    "payments":[
+        {"value":10, "title": "1x Spin", "description": "Game credit. To add 1x spin to your play"},
+        {"value":45, "title": "5x Spins", "description": "Game credit. To add 5x spins to your play"}
+    ],
+    "functions":[
+        {
+            "name":"showWheel",
+            "type":"r",
+            "function":"View the Wheel of fortune",
+            "inputs":[],
+            "inputHelp":[],
+            "outputs":["uint256[]"],
+            "outputHelp":["0= Lose. 1= Free Spin. 2= 0.020 XEX. 3= 0.040 XEX. 4= 1.000 XEX"]
+        },
+        {
+            "name":"getMySpins",
+            "type":"r",
+            "function":"Check your spins",
+            "inputs":[],
+            "inputHelp":[],
+            "outputs":["uint256"],
+            "outputHelp":["Number of spins"]
+        },
+        {
+            "name":"play",
+            "type":"x",
+            "function":"To spin the wheel",
+            "inputs":[],
+            "inputHelp":[]
+        },
+        {
+            "name":"getResult",
+            "type":"r",
+            "function":"To get the result of the last spin",
+            "inputs":[],
+            "inputHelp":[],
+            "outputs":["string"],
+            "outputHelp":["Prizes: 0= Lose. 1= Free Spin. 2= 0.020 XEX. 3= 0.040 XEX. 4= 1.000 XEX"]
+        },
+        {
+            "name":"getFreeRun",
+            "type":"x",
+            "function":"Get a free spin! You should not have already availed this facility.",
+            "inputs":[],
+            "inputHelp":[]
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "src":"",
+    "app":"",
+    "payments":[
+    ],
+    "functions":[
+        {
+            "name":"readNotice",
+            "type":"r",
+            "function":"To view notice issued to an account",
+            "inputs":["address"],
+            "inputHelp":["Address of the account to check"],
+            "outputs":["uint256","string"],
+            "outputHelp":["Notice type","Notice description"]
+        }
+    ]
+}

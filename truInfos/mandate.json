@@ -1,0 +1,49 @@
+{
+    "src":"",
+    "app":"",
+    "payments":[
+    ],
+    "functions":[
+        {
+            "name":"isVoter",
+            "type":"r",
+            "function":"Check if an address is a voter on the chain",
+            "inputs":["address"],
+            "inputHelp":["Address of the entity to check"],
+            "outputs":["bool"],
+            "outputHelp":["Result of query"]
+        },
+        {
+            "name":"startPetition",
+            "type":"x",
+            "function":"To start a petition to change chain settings. Only voters can start one.",
+            "inputs":["uint256","uint256","uint256"],
+            "inputHelp":["Mandate number. Use getCurrentMandateNo() to get latest mandate number.","Petition/Setting type (0-7)","Value of parameter"]
+        },
+        {
+            "name":"vote",
+            "type":"x",
+            "function":"To vote on a mandate. Only voters can vote",
+            "inputs":["uint256"],
+            "inputHelp":["Mandate number"]
+        },
+        {
+            "name":"getCurrentMandateNo",
+            "type":"r",
+            "function":"Get currenct mandate number to start a petition.",
+            "inputs":[],
+            "inputHelp":[],
+            "outputs":["uint256"],
+            "outputHelp":["Latest mandate number"]
+        },
+        {
+            "name":"getPetition",
+            "type":"r",
+            "function":"Get information about a mandate",
+            "inputs":["uint256"],
+            "inputHelp":["Mandate number"],
+            "outputs":["uint256","uint256","uint256","bool"],
+            "outputHelp":["Mandate/Setting type","Mandate parameter value","Timestamp of when started","Used?"]
+        }
+    ]
+}

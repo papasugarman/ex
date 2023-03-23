@@ -1,0 +1,171 @@
+{
+    "src":"",
+    "app":"",
+    "payments":[
+    ],
+    "functions":[
+        {
+            "name":"balanceOf",
+            "type":"r",
+            "function":"Check balance of an address",
+            "inputs":["address"],
+            "inputHelp":["Address of the entity to check"],
+            "outputs":["uint256"],
+            "outputHelp":["Number of EX Coins"]
+        },
+        {
+            "name":"myBalance",
+            "type":"r",
+            "function":"Check balance of your account",
+            "inputs":[],
+            "inputHelp":[],
+            "outputs":["uint256"],
+            "outputHelp":["Number of EX Coins"]
+        },
+        {
+            "name":"accountFee",
+            "type":"r",
+            "function":"View account fee for holding an EX Account",
+            "inputs":[],
+            "inputHelp":[],
+            "outputs":["uint256"],
+            "outputHelp":["Number of EX Coins"]
+        },
+        {
+            "name":"totalSupply",
+            "type":"r",
+            "function":"View EX Coin's total supply",
+            "inputs":[],
+            "inputHelp":[],
+            "outputs":["uint256"],
+            "outputHelp":["Result of query"]
+        },
+        {
+            "name":"isUserEX",
+            "type":"r",
+            "function":"Check if an address is UserEX",
+            "inputs":["address"],
+            "inputHelp":["Address of the entity to check"],
+            "outputs":["bool"],
+            "outputHelp":["Result of query"]
+        },
+        {
+            "name":"mint",
+            "type":"x",
+            "function":"To mint new EX Coins. Only the vending machine can call this function",
+            "inputs":["address","uint256"],
+            "inputHelp":["Address of the party to send EX Coins to","Number of EX Coins to mint"]
+        },
+        {
+            "name":"mine",
+            "type":"x",
+            "function":"To mine new EX Coins. Only chain mandate can call this function",
+            "inputs":["address","uint256"],
+            "inputHelp":["Address of the party to send EX Coins to","Number of EX Coins to mine"]
+        },
+        {
+            "name":"transfer",
+            "type":"x",
+            "function":"To transfer EX Coins to a recepient. Sender & Receiver must be UserEX",
+            "inputs":["address","uint256"],
+            "inputHelp":["Address of the recepient","Amount of EX Coins to send"]
+        },
+        {
+            "name":"refundableTransfer",
+            "type":"x",
+            "function":"To send refundable EX Coins to a recepient. Sender & Receiver must be UserEX",
+            "inputs":["address","uint256","uint256"],
+            "inputHelp":["Address of the recepient","Amount of EX Coins to send","Refundable time in seconds"]
+        },
+        {
+            "name":"refundableTransfer_extract",
+            "type":"x",
+            "function":"To extract refundable EX Coins either by the sender or the receiver",
+            "inputs":["address","address"],
+            "inputHelp":["Address of the sender","Address of the receiver"]
+        },
+        {
+            "name":"smartTransfer",
+            "type":"x",
+            "function":"To send arbitrated EX Coins to a recepient. Sender & Receiver must be UserEX",
+            "inputs":["address","uint256","uint256"],
+            "inputHelp":["Address of the recepient","Amount of EX Coins to send","Arbitration time in seconds"]
+        },
+        {
+            "name":"smartTransfer_update",
+            "type":"x",
+            "function":"To update status of a smart transfer",
+            "inputs":["address","address","uint256"],
+            "inputHelp":["Address of the sender","Address of receiver","Status (0/1 during time limit, bid amount aftet time limit)"]
+        },
+        {
+            "name":"smartTransfer_extract",
+            "type":"x",
+            "function":"To extract a smart transfer. After the time limit has passed.",
+            "inputs":["address","address"],
+            "inputHelp":["Address of the sender","Address of the receiver"]
+        },
+        {
+            "name":"truTransfer",
+            "type":"x",
+            "function":"To send EX Coins to a TruCode",
+            "inputs":["address","address","uint256"],
+            "inputHelp":["From address (usually yourself)","Address of the TruCode to send payment to","Number of EX Coins"]
+        },
+        {
+            "name":"interestRate",
+            "type":"r",
+            "function":"Get the current interest rate paid by EX Coin",
+            "inputs":[],
+            "inputHelp":[],
+            "outputs":["uint256"],
+            "outputHelp":["Interest %"]
+        },
+        {
+            "name":"savings_deposit",
+            "type":"x",
+            "function":"Deposit EX Coins to savings function",
+            "inputs":["uint256"],
+            "inputHelp":["Number of EX Coins to deposit"]
+        },
+        {
+            "name":"savings_withdraw",
+            "type":"x",
+            "function":"Withdraw EX Coins from savings and earn interest",
+            "inputs":[],
+            "inputHelp":[]
+        },
+        {
+            "name":"recycle",
+            "type":"x",
+            "function":"To recycle EX Coins. Will put EX Coins from your balance into recycling pot. Warning! Money will be lost.",
+            "inputs":["uint256"],
+            "inputHelp":["Number of EX Coins to recycle."]
+        },
+        {
+            "name":"recycleAccount",
+            "type":"x",
+            "function":"To recycle money in your account and close the account. Account should only hold account fee",
+            "inputs":[],
+            "inputHelp":[]
+        },
+        {
+            "name":"pot_recycling",
+            "type":"r",
+            "function":"Get information on the recycling pot",
+            "inputs":[],
+            "inputHelp":[],
+            "outputs":["uint256"],
+            "outputHelp":["Number of EX Coins in recycling pot"]
+        },
+        {
+            "name":"pot_arbitration",
+            "type":"r",
+            "function":"Get information on the arbitration pot",
+            "inputs":[],
+            "inputHelp":[],
+            "outputs":["uint256"],
+            "outputHelp":["Number of EX Coins in arbitration pot"]
+        }
+    ]
+}

@@ -1,0 +1,41 @@
+{
+    "src":"",
+    "app":"",
+    "payments":[
+        {"value":0, "title": "Credit in XEX", "description": "Upload any amount of XEX to pay for game. Get instant, free withdrawls"}
+    ],
+    "functions":[
+        {
+            "name":"getMyBalance",
+            "type":"r",
+            "function":"Check your balance",
+            "inputs":[],
+            "inputHelp":[],
+            "outputs":["uint256"],
+            "outputHelp":["Balance in EX Coins (without decimals)"]
+        },
+        {
+            "name":"play",
+            "type":"x",
+            "function":"To play a round of 3 cards. 3 random cards each will be drawn for you and the computer",
+            "inputs":["uint256"],
+            "inputHelp":["Amount of XEX to play with (without decimals). You must have balance to play"]
+        },
+        {
+            "name":"getResult",
+            "type":"r",
+            "function":"To get the result of the last play",
+            "inputs":[],
+            "inputHelp":[],
+            "outputs":["string","string"],
+            "outputHelp":["User hand","Computer hand"]
+        },
+        {
+            "name":"withdraw",
+            "type":"x",
+            "function":"To withdraw amount from balances",
+            "inputs":["uint256"],
+            "inputHelp":["Amount of XEX to withdraw"]
+        }
+    ]
+}

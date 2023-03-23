@@ -1,0 +1,74 @@
+{
+    "src":"",
+    "app":"",
+    "payments":[
+        {"value":20, "title": "1x Line", "description": "Game credit. To add 1x line to your play"},
+        {"value":90, "title": "5x Lines", "description": "Game credit. To add 5x lines to your play"}
+    ],
+    "functions":[
+        {
+            "name":"getMyBalance",
+            "type":"r",
+            "function":"Check the number of lines you can play",
+            "inputs":[],
+            "inputHelp":[],
+            "outputs":["uint256"],
+            "outputHelp":["Number of lines you can play"]
+        },
+        {
+            "name":"playLine",
+            "type":"x",
+            "function":"To play a line where you choose individual numbers",
+            "inputs":["uint256","uint256","uint256","uint256","uint256","uint256"],
+            "inputHelp":["Non repetitive number between 1-49","Non repetitive number between 1-49","Non repetitive number between 1-49","Non repetitive number between 1-49","Non repetitive number between 1-49","Non repetitive number between 1-49"]
+        },
+        {
+            "name":"playLuckyDip",
+            "type":"x",
+            "function":"To play lines filled in randomly by the computer",
+            "inputs":["uint256"],
+            "inputHelp":["Number of lucky dip lines"]
+        },
+        {
+            "name":"getCurrentLines",
+            "type":"r",
+            "function":"View your current lines played for the next draw",
+            "inputs":[],
+            "inputHelp":[],
+            "outputs":["string"],
+            "outputHelp":["Lines"]
+        },
+        {
+            "name":"getLastResult",
+            "type":"r",
+            "function":"View your last lines played in the previous draw. With result",
+            "inputs":[],
+            "inputHelp":[],
+            "outputs":["string"],
+            "outputHelp":["Lines played in previous draw"]
+        },
+        {
+            "name":"nextDraw",
+            "type":"r",
+            "function":"When will next draw take place",
+            "inputs":[],
+            "inputHelp":[],
+            "outputs":["uint256"],
+            "outputHelp":["Timestamp of the next draw"]
+        },
+        {
+            "name":"getFreeRun",
+            "type":"x",
+            "function":"Get a free line! You should not have already availed this facility.",
+            "inputs":[],
+            "inputHelp":[]
+        },
+        {
+            "name":"Draw",
+            "type":"x",
+            "function":"To conduct a draw. Only to be run by the owner to regulate play",
+            "inputs":[],
+            "inputHelp":[]
+        }
+    ]
+}

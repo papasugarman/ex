@@ -1,0 +1,92 @@
+{
+    "src":"",
+    "app":"",
+    "payments":[
+    ],
+    "functions":[
+        {
+            "name":"isMandated",
+            "type":"r",
+            "function":"Check if an address is chain mandated to carry out important changes",
+            "inputs":["address"],
+            "inputHelp":["Address of the entity to check"],
+            "outputs":["bool"],
+            "outputHelp":["Result of query"]
+        },
+        {
+            "name":"admin_relinquish",
+            "type":"r",
+            "function":"Has the admin relinquished control of the chain to decentralization",
+            "inputs":[],
+            "inputHelp":[],
+            "outputs":["bool"],
+            "outputHelp":["Result of query"]
+        },
+        {
+            "name":"addVoter",
+            "type":"x",
+            "function":"To add a voter to the EX Blockchain",
+            "inputs":["address"],
+            "inputHelp":["Address of the party to add. Only the admin or a vote of stakeholders can execute this function."]
+        },
+        {
+            "name":"removeVoter",
+            "type":"x",
+            "function":"To remove a voter to the EX Blockchain",
+            "inputs":["address"],
+            "inputHelp":["Address of the party to remove. Only the admin or a vote of stakeholders can execute this function."]
+        },
+        {
+            "name":"isVoter",
+            "type":"r",
+            "function":"Check if an address is a voter on the chain",
+            "inputs":["address"],
+            "inputHelp":["Address of the entity to check"],
+            "outputs":["bool"],
+            "outputHelp":["Result of query"]
+        },
+        {
+            "name":"isXEX",
+            "type":"r",
+            "function":"Check if an address is XEX's address",
+            "inputs":["address"],
+            "inputHelp":["Address of the entity to check"],
+            "outputs":["bool"],
+            "outputHelp":["Result of query"]
+        },
+        {
+            "name":"isOracle",
+            "type":"r",
+            "function":"Check if an address is Oracle's address",
+            "inputs":["address"],
+            "inputHelp":["Address of the entity to check"],
+            "outputs":["bool"],
+            "outputHelp":["Result of query"]
+        },
+        {
+            "name":"relinquishAdminControl",
+            "type":"x",
+            "function":"To relinquish admin's control for decentralization. Only admin can run",
+            "inputs":[],
+            "inputHelp":[]
+        },
+        {
+            "name":"getTruAt",
+            "type":"r",
+            "function":"Get Chain's TruCode's address by index",
+            "inputs":["uint256"],
+            "inputHelp":["Index by which to list (0-7)"],
+            "outputs":["address"],
+            "outputHelp":["Chain's TruCode at index"]
+        },
+        {
+            "name":"getAccAt",
+            "type":"r",
+            "function":"Get Chain's Account's address by index",
+            "inputs":["uint256"],
+            "inputHelp":["Index by which to list (0-7)"],
+            "outputs":["address"],
+            "outputHelp":["Chain's Account at index"]
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "src":"",
+    "app":"",
+    "payments":[
+    ],
+    "functions":[
+        {
+            "name":"addParty",
+            "type":"x",
+            "function":"To be called by the owner of the TruCode to add another party to the contract",
+            "inputs":["address"],
+            "inputHelp":["Address of the other party"]
+        },
+        {
+            "name":"addPara",
+            "type":"x",
+            "function":"To add a para to the contract. Can be added by any of the two parties",
+            "inputs":["string"],
+            "inputHelp":["Paragraph. Either in plain text or hashed for privacy"]
+        },
+        {
+            "name":"sign",
+            "type":"x",
+            "function":"To be called by both parties for this agreement to become valid",
+            "inputs":[],
+            "inputHelp":[]
+        },
+        {
+            "name":"getInfo",
+            "type":"r",
+            "function":"To get information about this agreement",
+            "inputs":[],
+            "inputHelp":[],
+            "outputs":["address[]","string[]","uint256[]","bool"],
+            "outputHelp":["Addresses of both the parties","Paras of the agreement","Timestamps of signing","Status of this agreement"]
+        }
+    ]
+}

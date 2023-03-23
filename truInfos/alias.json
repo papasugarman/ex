@@ -1,0 +1,49 @@
+{
+    "src":"",
+    "app":"",
+    "payments":[
+    ],
+    "functions":[
+        {
+            "name":"set",
+            "type":"x",
+            "function":"Set an alias for your account",
+            "inputs":["string"],
+            "inputHelp":["A never before used alias. Between 3 and 20 words long"]
+        },
+        {
+            "name":"setTru",
+            "type":"x",
+            "function":"Set an alias for your TruCode",
+            "inputs":["uint256","string"],
+            "inputHelp":["Nonce - the transaction serial number that resulted in the formation of the TruCode","A never before used alias. Between 3 and 20 words long"]
+        },
+        {
+            "name":"isUsed",
+            "type":"r",
+            "function":"Check if an alias is already in use",
+            "inputs":["string"],
+            "inputHelp":["An alias"],
+            "outputs":["bool"],
+            "outputHelp":["Result of the query"]
+        },
+        {
+            "name":"getByName",
+            "type":"r",
+            "function":"Get corresponding address of an alias",
+            "inputs":["string"],
+            "inputHelp":["Alias"],
+            "outputs":["address"],
+            "outputHelp":["Address of the entity"]
+        },
+        {
+            "name":"getByAddress",
+            "type":"r",
+            "function":"Get corresponding alias of an address",
+            "inputs":["address"],
+            "inputHelp":["Address of the entity to check"],
+            "outputs":["string"],
+            "outputHelp":["alias"]
+        }
+    ]
+}

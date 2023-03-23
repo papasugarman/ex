@@ -1,0 +1,38 @@
+{
+    "src":"",
+    "app":"",
+    "payments":[
+    ],
+    "functions":[
+{
+    "name":"issueStatement",
+    "type":"x",
+    "function":"To issue the text of the statement. Can be run by owner only",
+    "inputs":["string"],
+    "inputHelp":["Text of the statement"]
+},
+{
+    "name":"sign",
+    "type":"x",
+    "function":"To sign and fianlize the statement",
+    "inputs":[],
+    "inputHelp":[]
+},
+{
+    "name":"issueAddendum",
+    "type":"x",
+    "function":"To issue an addendum after the statement has been finalized",
+    "inputs":["address"],
+    "inputHelp":["Address of the new statement"]
+},
+{
+    "name":"viewStatement",
+    "type":"r",
+    "function":"To view this statement",
+    "inputs":[],
+    "inputHelp":[],
+    "outputs":["address","string","uint256","address"],
+    "outputHelp":["Address of the owner","The statement","Timestamp of signing","Addendum, if any"]
+}
+]
+}

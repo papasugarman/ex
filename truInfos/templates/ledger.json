@@ -1,0 +1,24 @@
+{
+    "src":"",
+    "app":"",
+    "payments":[
+    ],
+    "functions":[
+        {
+            "name":"addEntry",
+            "type":"x",
+            "function":"To add an entry into the ledger book",
+            "inputs":["address","uint256","bool"],
+            "inputHelp":["Address of the party","Amount","true/false - is debit?"]
+        },
+        {
+            "name":"viewLedger",
+            "type":"r",
+            "function":"To view the ledger book",
+            "inputs":[],
+            "inputHelp":[],
+            "outputs":["address[]","uint256[]","bool[]","uint256[]"],
+            "outputHelp":["Addresses in respective order","Amounts in order","isDebit?","Dates in order"]
+        }
+    ]
+}

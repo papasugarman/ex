@@ -1,0 +1,63 @@
+{
+    "src":"",
+    "app":"",
+    "payments":[
+    ],
+    "functions":[
+        {
+            "name":"toMint",
+            "type":"r",
+            "function":"Amount of EX Coins available to be minted",
+            "inputs":[],
+            "inputHelp":[],
+            "outputs":["uint256"],
+            "outputHelp":["Number of XEX to be minted"]
+        },
+        {
+            "name":"isUsedPath",
+            "type":"r",
+            "function":"Check if a path has already been used. Path is required to start a vend",
+            "inputs":["uint256"],
+            "inputHelp":["path"],
+            "outputs":["bool"],
+            "outputHelp":["status of query"]
+        },
+        {
+            "name":"start",
+            "type":"x",
+            "function":"Start a vend",
+            "inputs":["uint256"],
+            "inputHelp":["Path. A random, unique path postfix that hasn't been used before."]
+        },
+        {
+            "name":"check",
+            "type":"x",
+            "function":"Request a checking of your account. Will check BTC and ETH addresses to check upload. Can only be called after start",
+            "inputs":[],
+            "inputHelp":[]
+        },
+        {
+            "name":"getOrderDetails",
+            "type":"r",
+            "function":"To view the details of your current vend",
+            "inputs":[],
+            "inputHelp":[],
+            "outputs":["uint256","string","string","string","string"],
+            "outputHelp":["Amount of XEX","BTC Address","ETH Address","BTC Amount","ETH Amount"]
+        },
+        {
+            "name":"exchange",
+            "type":"x",
+            "function":"To exchange ETH/BTC for XEX as converted and displayed. Can only be called if there is some exchange value",
+            "inputs":[],
+            "inputHelp":[]
+        },
+        {
+            "name":"cancel",
+            "type":"x",
+            "function":"To cancel a vend. Vend can only be cancelled if started more than 1 day ago and there is no exchange value",
+            "inputs":[],
+            "inputHelp":[]
+        }
+    ]
+}
